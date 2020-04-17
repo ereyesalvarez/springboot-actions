@@ -1,0 +1,18 @@
+ ## Git Ignore
+
+# Maven
+/target
+
+# IntellIj
+.idea
+.idea/
+*.iml
+**.iml
+http-calls/http-client.private.env.json
+
+# Eclipse
+.classpath
+.project
+/.settings
+*.factorypath
+/bin
