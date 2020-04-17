@@ -1,5 +1,3 @@
-nombre: Spring boot CI
-
 on: [push]
 
 jobs:
