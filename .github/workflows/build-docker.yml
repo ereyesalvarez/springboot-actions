@@ -1,0 +1,19 @@
+on: [push]
+
+jobs:
+  build:
+    # El nombre del archivo es Greeting
+    name: Compile and push
+    # Este archivo se ejecuta en Linux
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to GitHub Packages
+      uses: docker/build-push-action@v1
+      with:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
+        repository: ereyesalvarez/tests-images/spring-layer
+        tag_with_ref: true
